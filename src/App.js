@@ -1,25 +1,64 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+
+import LandingPage from "./views/LandingPage";
+import AboutMe from "./views/AboutMe";
+import Contact from "./views/Contact";
+import Projects from "./views/Projects";
+import Resume from "./views/Resume";
+import NotFound from "./views/NotFound";
+import NavBar from "./components/NavBar";
+import "./App.css";
+
+const routes = [
+  {
+    exact: true,
+    path: "/",
+    component: LandingPage,
+  },
+  {
+    exact: false,
+    path: "/aboutme",
+    component: AboutMe,
+  },
+  {
+    exact: false,
+    path: "/contact",
+    component: Contact,
+  },
+  {
+    exact: false,
+    path: "/projects",
+    component: Projects,
+  },
+  {
+    exact: false,
+    path: "/resume",
+    component: Resume,
+  },
+  {
+    exact: false,
+    path: "/notfound",
+    component: NotFound,
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar />
+      <Switch>
+        {routes.map((r) => (
+          <Route
+            key={r.path}
+            exact={r.exact}
+            path={r.path}
+            component={r.component}
+          />
+        ))}
+        <Route component={NotFound} />
+      </Switch>
+    </>
   );
 }
 
