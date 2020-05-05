@@ -75,11 +75,14 @@ const Projects = () => {
 const ProjectsList = [
   {
     language: "Javascript",
-    title: "React Project #1",
-    subheader: "Class Project",
+    title: "Personal Website",
+    subheader: "Personal Project",
     image: ProjectReactLogo,
     content:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+    github_href: "",
+    sandbox_href:
+      "https://codesandbox.io/embed/github/kaseykaufmann/kasey-kaufmann-website/tree/master/?fontsize=14&hidenavigation=1&theme=dark",
   },
   {
     language: "Javascript",
@@ -123,8 +126,12 @@ const JavascriptProjects = () => (
             <CardMedia style={{ height: "200px" }} image={x.image} />
             <CardContent>{x.content}</CardContent>
             <CardActions>
-              <Button>GitHub</Button>
-              <Button>CodePen</Button>
+              <Button target="_blank" href={x.github_href}>
+                GitHub
+              </Button>
+              <Button target="_blank" href={x.sandbox_href}>
+                CodePen
+              </Button>
               <Button>Live Demo</Button>
             </CardActions>
           </Card>

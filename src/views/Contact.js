@@ -1,72 +1,116 @@
 import React from "react";
-import { Grid, ListItem, List } from "@material-ui/core";
+import { Grid, ListItem, List, IconButton } from "@material-ui/core";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import EmailIcon from "@material-ui/icons/Email";
+import CallIcon from "@material-ui/icons/Call";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 const Contact = () => {
   return (
     <div className="contact-body">
       <Grid container className="contact-grid">
         <Grid item md={6}>
-          <h2>Paul Hanna</h2>
           <img
             src="https://cdn2.iconfinder.com/data/icons/avatar-2/512/Fred_man-512.png"
             alt="avatar"
-            style={{ height: "250px" }}
+            style={{ height: "250px", margin: "50px 0px" }}
           />
           <p style={{ width: "75%", margin: "auto", paddingTop: "1em" }}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries
+            Thank you for contacting me!
+            <br /> I will get back to you within the next 24 hours with a
+            response to your inquiry.
           </p>
         </Grid>
         <Grid item md={6}>
-          <h2>Contact Me</h2>
+          <h2 className="contact-me">Contact Info</h2>
           <hr />
-
+          {/* Phone Number */}
           <List className="contact-list">
             <ListItem
               style={{
-                fontSize: "30px",
-                fontFamily: "Anton",
-                paddingBottom: "25px",
-              }}
-              divider
-            >
-              Phone Number: (123) 456-7890
-            </ListItem>
-
-            <ListItem
-              style={{
-                fontSize: "30px",
                 fontFamily: "Anton",
                 padding: "25px 0px",
               }}
+              alignItems="flex-start"
               divider
+              button
+              href="tel:2397770754"
+              component="a"
             >
-              (123) 456-7890
+              <IconButton
+                style={{ color: "black", paddingTop: "5px" }}
+                disabled
+                edge="start"
+              >
+                <CallIcon fontSize="large" />
+              </IconButton>
+              Phone Number: (239)777-0754
             </ListItem>
-
+            {/* Email */}
             <ListItem
               style={{
-                fontSize: "30px",
                 fontFamily: "Anton",
                 padding: "25px 0px",
               }}
+              alignItems="flex-start"
               divider
+              button
+              href="mailto:kaseykaufmann@yahoo.com"
+              target="_blank"
+              component="a"
             >
-              Email: someone@example.com
+              <IconButton
+                style={{ color: "black", paddingTop: "5px" }}
+                disabled
+                edge="start"
+              >
+                <EmailIcon fontSize="large" />
+              </IconButton>
+              Email: kaseykaufmann@yahoo.com
             </ListItem>
-
+            {/* Github */}
             <ListItem
               style={{
-                fontSize: "30px",
                 fontFamily: "Anton",
                 padding: "25px 0px",
               }}
+              alignItems="flex-start"
               divider
+              button
+              href="https://github.com/kaseykaufmann"
+              target="_blank"
+              component="a"
             >
-              GitHub: MySkypeID
+              <IconButton
+                style={{ color: "black", paddingTop: "5px" }}
+                disabled
+                edge="start"
+              >
+                <GitHubIcon fontSize="large" />
+              </IconButton>
+              GitHub: kaseykaufmann
+            </ListItem>
+            {/* LinkedIn */}
+            <ListItem
+              style={{
+                fontFamily: "Anton",
+                padding: "25px 0px",
+              }}
+              alignItems="flex-start"
+              divider
+              button
+              href="https://www.linkedin.com/in/kaseykaufmann/"
+              target="_blank"
+              component="a"
+            >
+              <IconButton
+                style={{ color: "black", paddingTop: "5px" }}
+                disabled
+                edge="start"
+              >
+                <LinkedInIcon fontSize="large" />
+              </IconButton>
+              LinkedIn: kaseykaufmann
             </ListItem>
           </List>
         </Grid>

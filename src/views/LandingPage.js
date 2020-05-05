@@ -1,68 +1,66 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+import wolf from "../static/images/wolf.jpg";
+import { Grid, IconButton } from "@material-ui/core";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 const LandingPage = () => {
   return (
-    <div style={{ width: "100%", margin: "auto" }}>
-      <Grid className="landing-grid">
-        <Grid md={12}>
-          <img
-            src="https://www.shareicon.net/download/2015/09/18/103157_man_512x512.png"
-            alt="avatar"
-            className="avatar-img"
-          />
+    <Grid className="landing-grid">
+      <Grid md={12} item>
+        <img src={wolf} alt="avatar" className="avatar-img" />
+        <div className="banner-text">
+          <h1 className="banner-text-h1">Full Stack Web Developer</h1>
+          <hr />
+          <p>
+            HTML/CSS | Bootstrap | JavaScript | React | React Native | NodeJS |
+            Express | MongoDB
+          </p>
+          <div className="social-links">
+            {/* LinkedIn */}
+            <IconButton
+              href="https://www.linkedin.com/in/kaseykaufmann/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <LinkedInIcon
+                fontSize="large"
+                style={{ color: "white", fontSize: "54px" }}
+              />
+            </IconButton>
+            {/* Github */}
+            <IconButton
+              href="https://github.com/kaseykaufmann"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <GitHubIcon
+                fontSize="large"
+                style={{ color: "white", fontSize: "54px" }}
+              />
+            </IconButton>
 
-          <div className="banner-text">
-            <h1>Full Stack Web Developer</h1>
+            {/* Freecodecamp */}
+            {/* <a
+              href="http://google.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i className="fa fa-free-code-camp" aria-hidden="true" />
+            </a> */}
 
-            <hr />
-
-            <p>
-              HTML/CSS | Bootstrap | JavaScript | React | React Native | NodeJS
-              | Express | MongoDB
-            </p>
-
-            <div className="social-links">
-              {/* LinkedIn */}
-              <a
-                href="http://google.com"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <i className="fa fa-linkedin-square" aria-hidden="true" />
-              </a>
-
-              {/* Github */}
-              <a
-                href="http://google.com"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <i className="fa fa-github-square" aria-hidden="true" />
-              </a>
-
-              {/* Freecodecamp */}
-              <a
-                href="http://google.com"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <i className="fa fa-free-code-camp" aria-hidden="true" />
-              </a>
-
-              {/* Youtube */}
-              <a
-                href="http://google.com"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <i className="fa fa-youtube-square" aria-hidden="true" />
-              </a>
-            </div>
+            {/* Youtube */}
+            {/* <a
+              href="http://google.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i className="fa fa-youtube-square" aria-hidden="true" />
+            </a> */}
           </div>
-        </Grid>
+        </div>
       </Grid>
-    </div>
+    </Grid>
   );
 };
 

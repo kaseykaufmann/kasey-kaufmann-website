@@ -15,8 +15,8 @@ const Resume = () => {
             />
           </div> */}
 
-          <h2 style={{ paddingTop: "2em" }}>Paul Hanna</h2>
-          <h4 style={{ color: "grey" }}>Programmer</h4>
+          <h2 style={{ paddingTop: "2em" }}>Kasey Kaufmann</h2>
+          <h4 style={{ color: "grey" }}>Software Engineer</h4>
           <hr style={{ borderTop: "3px solid #833fb2", width: "50%" }} />
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -28,29 +28,22 @@ const Resume = () => {
           </p>
           <hr style={{ borderTop: "3px solid #833fb2", width: "50%" }} />
           <h5>Address</h5>
-          <p>1 Hacker Way Menlo Park, 94025</p>
+          <p>6120 Cypress Hollow Way, Naples, FL 34109</p>
           <h5>Phone</h5>
-          <p>(123) 456-7890</p>
+          <p>(239) 777-0754</p>
           <h5>Email</h5>
-          <p>someone@example.com</p>
+          <p>kaseykaufmann@yahoo.com</p>
           <h5>Web</h5>
-          <p>mywebsite.com</p>
+          <p>kaseykaufmann.com</p>
           <hr style={{ borderTop: "3px solid #833fb2", width: "50%" }} />
         </Grid>
         <Grid item className="resume-right-col" md={8}>
           <h2>Education</h2>
 
           <Education
-            startYear={2002}
-            endYear={2006}
-            schoolName="My University"
-            schoolDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-          />
-
-          <Education
-            startYear={2007}
-            endYear={2009}
-            schoolName="My 2nd University"
+            startYear={2016}
+            endYear={2021}
+            schoolName="University of Florida"
             schoolDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
           />
           <hr style={{ borderTop: "3px solid #e22947" }} />
@@ -58,17 +51,21 @@ const Resume = () => {
           <h2>Experience</h2>
 
           <Experience
-            startYear={2009}
-            endYear={2012}
-            jobName="First Job"
-            jobDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            startYear="May 2018"
+            endYear="August 2018"
+            jobName="Software Engineering Intern"
+            jobDescription="●	Assisted with UI/UX development of a brand new offering being brought to market to assist over 40,000 caterers world-wide with their day-to-day administration
+            ●	Developed over 100 custom contact pages using Preact for some of the top catering companies worldwide
+            ●	Practiced agile methodologies weekly such as sprint planning and playbacks"
           />
 
           <Experience
-            startYear={2012}
-            endYear={2016}
-            jobName="Second Job"
-            jobDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            startYear="October 2015"
+            endYear="March 2016"
+            jobName="Customer Service Associate"
+            jobDescription="●	Focused on customer service resolving customer complaints while maintaining composure
+            ●	Gained sales experience up-selling goods to customers at the point of sale
+            ●	Experience keeping track of finances and updating bookkeeping on a daily basis"
           />
           <hr style={{ borderTop: "3px solid #e22947" }} />
           <h2>Skills</h2>
@@ -85,10 +82,8 @@ const Resume = () => {
 const Skills = (props) => {
   return (
     <>
-      {/* <div style={{ display: "flex" }}> */}
       {props.skill}
       <ProgressBar now={props.progress} />
-      {/* </div> */}
     </>
   );
 };
