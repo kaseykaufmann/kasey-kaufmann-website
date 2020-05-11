@@ -4,6 +4,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import EmailIcon from "@material-ui/icons/Email";
 import CallIcon from "@material-ui/icons/Call";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import ProfilePic from "../static/images/ProfilePic.jpeg";
 
 const Contact = () => {
   return (
@@ -11,9 +12,9 @@ const Contact = () => {
       <Grid container className="contact-grid">
         <Grid item md={6}>
           <img
-            src="https://cdn2.iconfinder.com/data/icons/avatar-2/512/Fred_man-512.png"
+            src={ProfilePic}
             alt="avatar"
-            style={{ height: "250px", margin: "50px 0px" }}
+            style={{ height: "350px", margin: "50px 0px", borderRadius: "25px" }}
           />
           <p style={{ width: "75%", margin: "auto", paddingTop: "1em" }}>
             Thank you for contacting me!

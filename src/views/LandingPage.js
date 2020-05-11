@@ -12,9 +12,9 @@ const LandingPage = () => {
         <div className="banner-text">
           <h1 className="banner-text-h1">Full Stack Web Developer</h1>
           <hr />
-          <p>
-            HTML/CSS | Bootstrap | JavaScript | React | React Native | NodeJS |
-            Express | MongoDB
+          <p className="banner-text-p">
+            HTML/CSS | MaterialUI | JavaScript | React | NodeJS | Express |
+            MongoDB | Java | C/C++
           </p>
           <div className="social-links">
             {/* LinkedIn */}
@@ -25,7 +25,8 @@ const LandingPage = () => {
             >
               <LinkedInIcon
                 fontSize="large"
-                style={{ color: "white", fontSize: "54px" }}
+                className="social-links"
+                style={{ color: "white" }}
               />
             </IconButton>
             {/* Github */}
@@ -36,7 +37,8 @@ const LandingPage = () => {
             >
               <GitHubIcon
                 fontSize="large"
-                style={{ color: "white", fontSize: "54px" }}
+                className="social-links"
+                style={{ color: "white" }}
               />
             </IconButton>
 

@@ -44,9 +44,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   toolbar: theme.mixins.toolbar,
-  drawerPaper: {
-    width: drawerWidth,
-  },
   content: {
     flexGrow: 1,
     // padding: theme.spacing(3),
@@ -76,15 +73,14 @@ const NavBar = () => {
     <div>
       <List>
         {buttons.map((x, index) => (
-          <ListItem button key={index}>
-            <Button
-              disableRipple
-              onClick={handleDrawerToggle}
-              component={Link}
-              to={x.route}
-            >
-              {x.name}
-            </Button>
+          <ListItem
+            button
+            onClick={handleDrawerToggle}
+            component={Link}
+            to={x.route}
+            key={index}
+          >
+            <Button disableRipple>{x.name}</Button>
           </ListItem>
         ))}
       </List>
@@ -106,7 +102,8 @@ const NavBar = () => {
           </IconButton>
           <Button
             size="large"
-            style={{ color: "black", fontSize: "28px" }}
+            style={{ color: "black" }}
+            className="navbar-header"
             disableRipple
             disableFocusRipple
             component={Link}
@@ -135,12 +132,9 @@ const NavBar = () => {
         <Hidden smUp implementation="css">
           <Drawer
             variant="temporary"
-            anchor={theme.direction === "rtl" ? "right" : "left"}
+            anchor={theme.direction === "rtl" ? "right" : "top"}
             open={mobileOpen}
             onClose={handleDrawerToggle}
-            classes={{
-              paper: classes.drawerPaper,
-            }}
             ModalProps={{
               keepMounted: true, // Better open performance on mobile.
             }}
